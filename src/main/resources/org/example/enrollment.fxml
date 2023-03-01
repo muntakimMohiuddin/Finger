@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.EnrollmentController">
+    <children>
+        <TextField fx:id="firstNameTextField" alignment="CENTER" layoutX="43.0" layoutY="75.0" prefHeight="50.0" prefWidth="276.0" promptText="First Name" />
+        <TextField fx:id="lastNameTextField" alignment="CENTER" layoutX="43.0" layoutY="148.0" prefHeight="50.0" prefWidth="276.0" promptText="Last Name" />
+        <TextField fx:id="nationalIdTextField" alignment="CENTER" layoutX="43.0" layoutY="213.0" prefHeight="50.0" prefWidth="276.0" promptText="NID" />
+        <TextField fx:id="phoneNumberTextField" alignment="CENTER" layoutX="43.0" layoutY="286.0" prefHeight="50.0" prefWidth="276.0" promptText="Phone no." />
+
+        <Button fx:id="enrollButton" alignment="CENTER" layoutX="225.0" layoutY="360.0" mnemonicParsing="false" onAction="#enrollButtonAction" prefHeight="50.0" prefWidth="150.0" styleClass="glyph-icon" stylesheets="@style.css" text="Enroll" textFill="GREEN">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <ImageView id="fingerprintImageView" fx:id="fingerprintImageView" fitHeight="227.0" fitWidth="200.0" layoutX="386.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@fingerprint_bg.png" />
+            </image></ImageView>
+        <Label fx:id="fingerprintCapturedLabel" alignment="CENTER" layoutX="386.0" layoutY="311.0" prefHeight="27.0" prefWidth="170.0" textFill="#02b223">
+            <font>
+                <Font size="11.0" />
+            </font></Label>
+        <ImageView id="backButton" fx:id="backButton" fitHeight="41.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backButtonAction" pickOnBounds="true" preserveRatio="true" styleClass="fingerprint-image-view-wrapper glyph-icon">
+            <image>
+                <Image url="@back_button.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+.cover{
+     -fx-background-image: url("cover_450.jpg");
+}
+
+
+.glyph-icon{
+    -fx-fill: White;
+    -fx-background-radius: 10px;
+
+}
+.glyph-icon:hover{
+    -fx-cursor: hand;
+    -fx-fill: black;
+}
+
+
+.image-view-wrapper {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}

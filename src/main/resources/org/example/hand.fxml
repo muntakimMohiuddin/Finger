@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Hand">
+    <children>
+      <Button fx:id="fileChooserButton" layoutX="340.0" layoutY="500.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="46.0" prefWidth="111.0" styleClass="glyph-icon" stylesheets="@style.css" text="Choose File" visible="false" />
+        <ImageView id="backButton" fx:id="backButton" fitHeight="41.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMousePressed="#backButtonAction" pickOnBounds="true" preserveRatio="true" styleClass="fingerprint-image-view-wrapper glyph-icon">
+            <image>
+                <Image url="@back_button.png" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="48.0" layoutY="-101.0">
+            <ImageView fitHeight="316.0" fitWidth="324.0" layoutX="29.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@backside_of_left_hand-removebg.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="316.0" fitWidth="324.0" layoutX="342.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@backside_of_right_hand-removebg.png" />
+                </image>
+            </ImageView>
+            <Ellipse fx:id="LL" fill="TRANSPARENT" layoutX="78.0" layoutY="260.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="43.0" radiusY="13.0" rotate="45.0" strokeType="INSIDE" />
+            <Circle fx:id="LLC" fill="#21ff3f00" layoutX="58.0" layoutY="241.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="LR" fill="TRANSPARENT" layoutX="117.0" layoutY="216.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="56.0" radiusY="13.0" rotate="72.0" strokeType="INSIDE" />
+            <Circle fx:id="LRC" fill="#21ff3f00" layoutX="103.0" layoutY="176.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="LM" fill="TRANSPARENT" layoutX="162.0" layoutY="203.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="65.0" radiusY="15.0" rotate="80.0" strokeType="INSIDE" />
+            <Circle fx:id="LMC" fill="#21ff3f00" layoutX="152.0" layoutY="153.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="LI" fill="TRANSPARENT" layoutX="220.0" layoutY="207.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="55.0" radiusY="13.0" rotate="96.0" strokeType="INSIDE" />
+            <Circle fx:id="LIC" fill="#21ff3f00" layoutX="225.0" layoutY="168.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="LT" fill="TRANSPARENT" layoutX="284.0" layoutY="310.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="49.0" radiusY="17.0" rotate="140.0" strokeType="INSIDE" />
+            <Circle fx:id="LTC" fill="#21ff3f00" layoutX="313.0" layoutY="288.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="RT" fill="TRANSPARENT" layoutX="403.0" layoutY="312.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="50.0" radiusY="16.0" rotate="42.0" strokeType="INSIDE" />
+            <Circle fx:id="RTC" fill="#21ff3f00" layoutX="375.0" layoutY="288.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="RL" fill="TRANSPARENT" layoutX="610.0" layoutY="260.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="43.0" radiusY="13.0" rotate="135.0" strokeType="INSIDE" />
+            <Circle fx:id="RIC" fill="#21ff3f00" layoutX="463.0" layoutY="168.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="RI" fill="TRANSPARENT" layoutX="468.0" layoutY="210.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="55.0" radiusY="15.0" rotate="80.0" strokeType="INSIDE" />
+            <Circle fx:id="RMC" fill="#21ff3f00" layoutX="535.0" layoutY="154.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="RM" fill="TRANSPARENT" layoutX="525.0" layoutY="203.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="65.0" radiusY="15.0" rotate="100.0" strokeType="INSIDE" />
+            <Circle fx:id="RRC" fill="#21ff3f00" layoutX="581.0" layoutY="176.0" radius="9.0" strokeType="INSIDE" />
+
+            <Ellipse fx:id="RR" fill="TRANSPARENT" layoutX="569.0" layoutY="218.0" onMouseEntered="#mouseEnterOnFingers" onMouseExited="#mouseExitFromFingers" onMousePressed="#fingerSelected" radiusX="59.0" radiusY="13.0" rotate="108.0" strokeType="INSIDE" />
+            <Circle fx:id="RLC" fill="#21ff3f00" layoutX="629.0" layoutY="242.0" radius="9.0" strokeType="INSIDE" />
+            <Button fx:id="identifyButton" layoutX="292.0" layoutY="396.0" mnemonicParsing="false" onAction="#identifyButtonPressed" prefHeight="48.0" prefWidth="103.0" styleClass="glyph-icon" stylesheets="@style.css" text="Select All" />
+         <RadioButton fx:id="readFromSensor" layoutX="277.0" layoutY="119.0" mnemonicParsing="false" onAction="#toggleReadMode" text="Read From Sensor" />
+         <RadioButton fx:id="readFromFile" layoutX="276.0" layoutY="159.0" mnemonicParsing="false" onAction="#toggleReadMode" text="Read From File" />
+
+        </AnchorPane>
+        <ImageView id="placeFingerImageView" fx:id="placeFingerImageView" fitHeight="350.0" fitWidth="500.0" layoutX="143.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+        </ImageView>
+        <StackPane fx:id="fingerprintPane" layoutX="245.0" layoutY="400.0">
+            <ImageView id="fingerprintImageView" fx:id="fingerprintImageView" fitHeight="250.0" fitWidth="187.0" layoutX="386.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+            <ImageView id="fingerprintSearchImageView" fx:id="fingerprintSearchImageView" fitHeight="250.0" fitWidth="187.0" layoutX="386.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+<!--         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="250.0" stroke="BLACK" strokeType="INSIDE" width="187.0"  />-->
+        </StackPane>
+
+        <AnchorPane fx:id="infoPane" layoutX="0.0" layoutY="330.0" prefWidth="700" visible="false">
+            <Label fx:id="nameText" alignment="BASELINE_LEFT" layoutX="136.0" prefHeight="50.0" prefWidth="195.0" text="Dummy name" />
+            <Label fx:id="fatherNameText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="25.0" prefHeight="50.0" prefWidth="195.0" text="Dummy fname" />
+            <Label fx:id="motherNameText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="50.0" prefHeight="50.0" prefWidth="195.0" text="Dummy mname" />
+            <Label fx:id="genderText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="75.0" prefHeight="50.0" prefWidth="195.0" text="Dummy gender" />
+            <Label fx:id="religionText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="100.0" prefHeight="50.0" prefWidth="162.0" text="Dummy Religion" />
+            <Label fx:id="ageText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="125" prefHeight="50.0" prefWidth="195.0" text="Dummy age" />
+            <Label fx:id="placeOfBirthText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="149.0" prefHeight="50.0" prefWidth="195.0" text="Dummy pob" />
+            <Label fx:id="dateOfBirthText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="175.0" prefHeight="50.0" prefWidth="195.0" text="Dummy dob" />
+            <Label fx:id="villageText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="200.0" prefHeight="50.0" prefWidth="195.0" text="Dummy village" />
+            <Label fx:id="districtText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="225.0" prefHeight="50.0" prefWidth="162.0" text="Dummy distict" />
+
+            <Label fx:id="countryText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="250" prefHeight="50.0" prefWidth="195.0" text="Dummy country" />
+            <Label fx:id="addressText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="270.0" prefHeight="50.0" prefWidth="195.0" text="Dummy address" />
+            <Label fx:id="policeStationText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="290.0" prefHeight="50.0" prefWidth="195.0" text="Dummy pst" />
+            <Label fx:id="nationalityText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="310.0" prefHeight="50.0" prefWidth="195.0" text="Dummy national" />
+            <Label fx:id="dateOfEntryText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="332.0" prefHeight="50.0" prefWidth="162.0" text="Dummy dateofentry" />
+            <Label fx:id="createdByText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="354.0" prefHeight="50.0" prefWidth="195.0" text="Dummy created by" />
+            <Label fx:id="creationDateText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="373.0" prefHeight="50.0" prefWidth="195.0" text="Dummy creationdate" />
+            <Label fx:id="machineIdText" alignment="BASELINE_LEFT" layoutX="136.0" layoutY="395.0" prefHeight="41.0" prefWidth="195.0" text="Dummy machine" />
+
+
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="0" prefHeight="50.0" prefWidth="86.0" text="Name" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="25.0" prefHeight="50.0" prefWidth="96.0" text="Father Name" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="50.0" prefHeight="50.0" prefWidth="104.0" text="Mother Name" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="75.0" prefHeight="50.0" prefWidth="97.0" text="Gender" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="100.0" prefHeight="50.0" prefWidth="97.0" text="Religion" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="125.0" prefHeight="50.0" prefWidth="97.0" text="Age" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="150.0" prefHeight="50.0" prefWidth="97.0" text="Place Of Birth" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="175.0" prefHeight="50.0" prefWidth="86.0" text="Date Of Birth" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="200.0" prefHeight="50.0" prefWidth="97.0" text="Village" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="225.0" prefHeight="50.0" prefWidth="97.0" text="District" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="250.0" prefHeight="50.0" prefWidth="97.0" text="County" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="270.0" prefHeight="50.0" prefWidth="97.0" text="Address" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="290.0" prefHeight="50.0" prefWidth="97.0" text="Police Station" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="310.0" prefHeight="50.0" prefWidth="97.0" text="Nationality" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="332.0" prefHeight="50.0" prefWidth="104.0" text="Date Of Entry" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="353.0" prefHeight="50.0" prefWidth="96.0" text="Created By" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="374.0" prefHeight="50.0" prefWidth="103.0" text="Creation Date" />
+            <Label alignment="BASELINE_LEFT" layoutX="25.0" layoutY="399.0" prefHeight="41.0" prefWidth="86.0" text="Machine ID" />
+
+            <ImageView id="photoImageView" fx:id="photoImageView" fitHeight="320.0" fitWidth="240.0" layoutX="387.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@fingerprint_bg.png" />
+                </image>
+            </ImageView>
+
+        </AnchorPane>
+        <ImageView fx:id="notFoundImageview" fitHeight="200.0" fitWidth="300.0" visible="false" x="214.0" y="450.0">
+            <image>
+                <Image url="@not_found.png" />
+            </image></ImageView>
+
+    </children>
+</AnchorPane>
